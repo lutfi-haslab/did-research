@@ -29,7 +29,7 @@ app.use(credentialRoute);
 app.use(issuer);
 app.use(holder);
 
-app.listen(3000, ({ hostname, port }) => {
+app.listen(7500, ({ hostname, port }) => {
   console.log(`🦊 Elysia is running at ${hostname}:${port}`);
   console.log(
     `🦊 Open http://${hostname}:${port}/swagger to see the API documentation`
