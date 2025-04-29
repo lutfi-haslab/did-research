@@ -1,11 +1,9 @@
 import { swagger } from "@elysiajs/swagger";
-import { Elysia, t } from "elysia";
-import { agent } from "./agent";
+import { Elysia } from "elysia";
 import credentialRoute from "./routes/credential";
+import holder from "./routes/holder";
 import identifierRoute from "./routes/identifier";
 import issuer from "./routes/issuer";
-import holder from "./routes/holder";
-import { decodeJwt, encodeJwt } from "./utils/jwtUtil";
 
 
 

@@ -27,7 +27,7 @@ import {
 } from '@veramo/data-store'
 import type { AgentRouterOptions } from '@veramo/remote-server'
 
-const KMS_SECRET_KEY = 'd596709c76fabeaf5d5ee75dc806692bef88b80211e0c0db8b051dd01c047994'
+const KMS_SECRET_KEY = process.env.KMS_SECRET_KEY;
 
 export const dbConnection = new DataSource({
     type: 'sqlite',
@@ -49,7 +49,7 @@ export const agent = createAgent<
             store: new KeyStore(dbConnection),
             kms: {
                 local: new KeyManagementSystem(
-                    new PrivateKeyStore(dbConnection, new SecretBox(KMS_SECRET_KEY)),
+                    new PrivateKeyStore(dbConnection, new SecretBox(KMS_SECRET_KEY as string)),
                 ),
             },
         }),
