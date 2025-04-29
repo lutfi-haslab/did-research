@@ -1,0 +1,1 @@
+export const revokedCredentials = new Set<string>();

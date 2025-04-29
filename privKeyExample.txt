@@ -1,0 +1,8 @@
+bunx @veramo/cli config create-secret-key
+
+        X25519 raw private key (hex encoded):
+  
+        d596709c76fabeaf5d5ee75dc806692bef88b80211e0c0db8b051dd01c047994
+  
+        You can use this key with @veramo/kms-local#SecretBox
+        or replace the default agent.yml 'dbEncryptionKey' constant
