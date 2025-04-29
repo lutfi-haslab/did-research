@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun --watch src/index.ts",
-    "start:pm2": "pm2 start --interpreter ~/.bun/bin/bun src/index.ts --name did-app-server",
+    "start:pm2": "pm2 start \"bun run dev\" --name did-app-server",
     "build": "bun build ./src/index.ts --outdir ./build",
     "start": "NODE_ENV=production node dist/index.js"
   },
