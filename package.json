@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun --watch src/index.ts",
-    "build": "tsc src/index.ts --outDir dist",
+    "build": "bun build ./src/index.ts --outdir ./build",
     "start": "NODE_ENV=production node dist/index.js"
   },
   "devDependencies": {
